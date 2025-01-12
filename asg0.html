@@ -1,0 +1,63 @@
+<!--
+Name: Nick Corfmat
+Email: ncorfmat@ucsc.edu
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Draw a blue rectangle (canvas versition)</title>
+</head>
+
+<body onload="main()">
+    <canvas id="example" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+    <script src="asg0.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+
+    <br>
+    <label for="name">v1:</label>
+
+    <label for="name">x</label>
+    <input type="number" id="v1-x" name="name" required minlength="4" maxlength="8" size="10" />
+
+    <label for="name">y</label>
+    <input type="number" id="v1-y" name="name" required minlength="4" maxlength="8" size="10" />
+
+    <br>
+    <label for="name">v2:</label>
+
+    <label for="name">x</label>
+    <input type="number" id="v2-x" name="name" required minlength="4" maxlength="8" size="10" />
+
+    <label for="name">y</label>
+    <input type="number" id="v2-y" name="name" required minlength="4" maxlength="8" size="10" />
+
+    <br>
+    <input type="button" value="Draw" onclick="handleDrawEvent()" />
+
+    <br><br>
+
+    <label for="operation-select">Operation:</label>
+
+    <select name="operations" id="operation-select">
+        <option value="add">Add</option>
+        <option value="sub">Subtract</option>
+        <option value="mult">Multiply</option>
+        <option value="div">Divide</option>
+        <option value="mag">Magnitude</option>
+        <option value="norm">Normalize</option>
+        <option value="angle">Angle Between</option>
+        <option value="area">Area</option>
+    </select>
+
+    <label for="name">Scalar:</label>
+    <input type="number" id="scalar" name="name" required minlength="4" maxlength="8" size="10" />
+
+    <br>
+    <input type="button" value="Draw" onclick="handleDrawOperationEvent()" />
+
+</body>
+</html>
